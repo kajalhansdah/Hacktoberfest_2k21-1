@@ -1,0 +1,10 @@
+void mirror(struct Node* node) {
+    if(!node)return;
+    struct  Node* temp=node->right;
+    node->right=node->left;
+    node->left=temp;
+    
+    mirror(node->left);
+    mirror(node->right);
+    
+}
